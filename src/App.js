@@ -16,6 +16,20 @@ export class App extends React.Component {
     };
   }
   // The tick function sets the current state. TypeScript will let us know
+  componentDidMount() {
+    let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
+    const url = `http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${key}&limit=5`;
+
+    fetch(url)
+      .then(resp => resp.json())
+      .then(res => {
+        console.log(res);
+
+        this.setState({
+          giphyData: { ...res }
+        });
+      });
+  }
 
   toggleClass = () => {
     this.setState(prevState => ({ active: !prevState.active }));
