@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+.cookie-rim {
+  height: 100%;
+  width: 100%;
+  -moz-box-shadow: 0 0 35px 10px #9ffef7;
+  -webkit-box-shadow: 0 0 35px 10px #9ffef7;
+  box-shadow: 0 0 35px 10px #9ffef7;
+
+  border-radius: 50%;
+  transition: 2s ease-in-out;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
 

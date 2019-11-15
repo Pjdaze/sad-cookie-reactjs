@@ -52,7 +52,11 @@ export class App extends React.Component {
             <div
               onClick={this.toggleClass}
               className={`cookie-eye sad ${active ? "active" : null}`}
-            ></div>
+            >
+              <div
+                className={` cookie-rim  sad ${active ? "active" : null}`}
+              ></div>
+            </div>
 
             <div className="left-foot"></div>
 
@@ -72,7 +76,7 @@ export class App extends React.Component {
 
             <button
               onClick={this.handleGoodNews}
-              className="good-news news sad"
+              className={`news good-news sad ${active ? "active" : null}`}
             >
               <h4>{goodNews}</h4>
             </button>

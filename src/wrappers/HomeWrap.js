@@ -44,6 +44,9 @@ const HomeWrap = styled.div`
     &:hover {
       background: linear-gradient(to right, #222, rgb(75, 201, 255));
     }
+    &.active::after {
+      background-color: red;
+    }
   }
 
   .reset {
@@ -93,6 +96,7 @@ const HomeWrap = styled.div`
     height: 15px;
     width: 15px;
     border-radius: 50%;
+
     box-shadow: inset 0 0 0px 3px #82e0f1;
     transition: 3s ease-in-out;
 
@@ -107,7 +111,10 @@ const HomeWrap = styled.div`
   .cookie-rim {
     height: 100%;
     width: 100%;
+    -moz-box-shadow: 0 0 35px 10px #9ffef7;
+    -webkit-box-shadow: 0 0 35px 10px #9ffef7;
     box-shadow: 0 0 35px 10px #9ffef7;
+
     border-radius: 50%;
     transition: 2s ease-in-out;
 
