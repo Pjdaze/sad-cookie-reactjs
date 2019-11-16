@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HomeWrap = styled.div`
-min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,8 +21,7 @@ min-height: 100vh;
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: #fff;
-min-height: 1000px;
-
+  min-height: 1000px;
 
   .news-wrapper {
     width: 99%;

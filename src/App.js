@@ -4,13 +4,12 @@ import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 
 const videoStyle = {
-  width: '600px',
-   position: 'absolute', 
-   left: '50%',
-   marginLeft: '-300px',
-   top: '30%'
-}
-
+  width: "600px",
+  position: "absolute",
+  left: "50%",
+  marginLeft: "-300px",
+  top: "30%"
+};
 
 export class App extends React.Component {
   constructor(props) {
@@ -111,7 +110,13 @@ export class App extends React.Component {
         <button type="button" className="reset sad" onClick={this.handleReset}>
           <h4>{reset}</h4>
         </button>
-        <video playsInline={true} loop={true} autoPlay style={videoStyle}  src={man}  />
+        <video
+          playsInline={true}
+          loop={true}
+          autoPlay
+          style={videoStyle}
+          src={man}
+        />
       </HomeWrap>
     );
   }
