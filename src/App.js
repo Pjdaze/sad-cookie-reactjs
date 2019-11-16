@@ -3,6 +3,15 @@ import logo from "./logo.svg";
 import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 
+const videoStyle = {
+  width: '600px',
+   position: 'absolute', 
+   left: '50%',
+   marginLeft: '-300px',
+   top: '30%'
+}
+
+
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,13 +21,14 @@ export class App extends React.Component {
       reset: "Reset",
       goodNews: "Good News",
       badNews: "Bad News",
-      giphyData: {}
+      giphyData: {},
+      man: ""
     };
   }
   // The tick function sets the current state. TypeScript will let us know
   componentDidMount() {
     let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
-    const url = `http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=${key}&limit=5`;
+    const url = `http://api.giphy.com/v1/gifs/SUQY8unAULeCvBS0Rl?&api_key=${key}&limit=5`;
 
     fetch(url)
       .then(resp => resp.json())
@@ -37,14 +47,17 @@ export class App extends React.Component {
 
   handleBadNews = () => {
     this.setState({
-      active: true
+      active: true,
+      man: "",
+      reset: "reset"
     });
   };
 
   handleReset = () => {
     this.setState({
-      reset: "Are You Ready To Work?",
-      active: false
+      reset: "Are You Ready To Work",
+      active: false,
+      man: this.state.giphyData.data.images.hd.mp4
     });
   };
 
@@ -56,54 +69,49 @@ export class App extends React.Component {
   };
 
   render() {
-    const { active, reset, goodNews, badNews } = this.state;
+    const { active, reset, goodNews, badNews, man } = this.state;
     return (
       <HomeWrap>
-        <div className="wrapper">
-          <h1 className="head">SAD COOKIE</h1>
+        <h1 className="head">SAD COOKIE</h1>
 
-          <div className="cookie">
+        <div className="cookie">
+          <div
+            onClick={this.toggleClass}
+            className={`cookie-eye sad ${active ? "active" : null}`}
+          >
             <div
-              onClick={this.toggleClass}
-              className={`cookie-eye sad ${active ? "active" : null}`}
-            >
-              <div
-                className={` cookie-rim  sad ${active ? "active" : null}`}
-              ></div>
+              className={` cookie-rim  sad ${active ? "active" : null}`}
+            ></div>
+          </div>
+
+          <div className="left-foot"></div>
+
+          <div className="right-foot"></div>
+        </div>
+
+        {/* end of cookie*/}
+
+        {/*CONTROLS AREA*/}
+
+        <div className="news-wrapper">
+          <button onClick={this.handleBadNews}>
+            <div className="good-news news sad">
+              <h4>{badNews}</h4>
             </div>
-
-            <div className="left-foot"></div>
-
-            <div className="right-foot"></div>
-          </div>
-
-          {/* end of cookie*/}
-
-          {/*CONTROLS AREA*/}
-
-          <div className="news-wrapper">
-            <button onClick={this.handleBadNews}>
-              <div className="good-news news sad">
-                <h4>{badNews}</h4>
-              </div>
-            </button>
-
-            <button
-              onClick={this.handleGoodNews}
-              className={`news good-news sad ${active ? "active" : null}`}
-            >
-              <h4>{goodNews}</h4>
-            </button>
-          </div>
+          </button>
 
           <button
-            type="button"
-            className="reset sad"
-            onClick={this.handleReset}
+            onClick={this.handleGoodNews}
+            className={`news good-news sad ${active ? "active" : null}`}
           >
-            <h4>{reset}</h4>
+            <h4>{goodNews}</h4>
           </button>
         </div>
+
+        <button type="button" className="reset sad" onClick={this.handleReset}>
+          <h4>{reset}</h4>
+        </button>
+        <video playsInline={true} loop={true} autoPlay style={videoStyle}  src={man}  />
       </HomeWrap>
     );
   }

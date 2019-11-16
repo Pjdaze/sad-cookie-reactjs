@@ -1,10 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
 }
 
 code {
@@ -22,9 +25,6 @@ code {
   border-radius: 50%;
   transition: 2s ease-in-out;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
-@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
 
 button {
   background: none;
@@ -57,14 +57,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-body {
-  height: 100%;
-
-  margin: 0;
-  padding: 0;
-  line-height: 1.5em;
-}
-
 a {
   text-decoration: none;
 }
@@ -72,27 +64,3 @@ ul {
   list-style: none;
 }
 
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100vw;
-  background: #16222a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #3a6073,
-    #16222a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #3a6073,
-    #16222a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  color: #fff;
-  height: 100%;
-  min-height: 100vh;
-}

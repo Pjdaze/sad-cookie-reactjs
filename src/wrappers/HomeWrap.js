@@ -1,14 +1,36 @@
 import styled from "styled-components";
 
 const HomeWrap = styled.div`
-  height: 1000px;
-  min-height: 100%;
+min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  background: #16222a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #3a6073,
+    #16222a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #3a6073,
+    #16222a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff;
+min-height: 1000px;
+
+
   .news-wrapper {
     width: 99%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px;
+    height: 100%;
   }
   .news {
     display: flex;
@@ -22,6 +44,9 @@ const HomeWrap = styled.div`
 
     font-family: "Libre Barcode 39 Text", cursive;
     font-size: 1.9em;
+    video {
+      margin: 100px;
+    }
 
     &:hover {
       transition: all 2s ease-in-out;
