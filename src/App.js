@@ -37,7 +37,7 @@ export class App extends React.Component {
   // The tick function sets the current state. TypeScript will let us know
   componentDidMount() {
     let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
-    const url = `http://api.giphy.com/v1/gifs/SUQY8unAULeCvBS0Rl?&api_key=${key}&limit=5`;
+    const url = `https://api.giphy.com/v1/gifs/SUQY8unAULeCvBS0Rl?&api_key=${key}&limit=5`;
 
     fetch(url)
       .then(resp => resp.json())
