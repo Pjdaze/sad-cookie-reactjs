@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sad-cookie-reactjs/static/css/main.347386fc.chunk.css",
-    "main.js": "/sad-cookie-reactjs/static/js/main.05d7dbd8.chunk.js",
-    "main.js.map": "/sad-cookie-reactjs/static/js/main.05d7dbd8.chunk.js.map",
+    "main.js": "/sad-cookie-reactjs/static/js/main.88b8f5be.chunk.js",
+    "main.js.map": "/sad-cookie-reactjs/static/js/main.88b8f5be.chunk.js.map",
     "runtime-main.js": "/sad-cookie-reactjs/static/js/runtime-main.8fe47950.js",
     "runtime-main.js.map": "/sad-cookie-reactjs/static/js/runtime-main.8fe47950.js.map",
     "static/js/2.cc89ed48.chunk.js": "/sad-cookie-reactjs/static/js/2.cc89ed48.chunk.js",
     "static/js/2.cc89ed48.chunk.js.map": "/sad-cookie-reactjs/static/js/2.cc89ed48.chunk.js.map",
     "index.html": "/sad-cookie-reactjs/index.html",
-    "precache-manifest.cba298a2a991bbed9f45cf8c6e99688b.js": "/sad-cookie-reactjs/precache-manifest.cba298a2a991bbed9f45cf8c6e99688b.js",
+    "precache-manifest.caa89a3309ec7fa3b939a0f352d7a05c.js": "/sad-cookie-reactjs/precache-manifest.caa89a3309ec7fa3b939a0f352d7a05c.js",
     "service-worker.js": "/sad-cookie-reactjs/service-worker.js",
     "static/css/main.347386fc.chunk.css.map": "/sad-cookie-reactjs/static/css/main.347386fc.chunk.css.map",
     "static/media/logo.svg": "/sad-cookie-reactjs/static/media/logo.25bf045c.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8fe47950.js",
     "static/js/2.cc89ed48.chunk.js",
     "static/css/main.347386fc.chunk.css",
-    "static/js/main.05d7dbd8.chunk.js"
+    "static/js/main.88b8f5be.chunk.js"
   ]
 }
