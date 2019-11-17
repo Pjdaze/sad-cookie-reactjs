@@ -60,7 +60,8 @@ export class App extends React.Component {
       active: true,
       man: "",
       reset: "reset",
-      attributes: ""
+      attributes: "",
+      goodNews: "Good News"
     });
   };
 
