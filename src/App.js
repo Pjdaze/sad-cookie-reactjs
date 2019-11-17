@@ -26,7 +26,7 @@ export class App extends React.Component {
 
     this.state = {
       active: false,
-      reset: "Reset",
+      reset: "Get Me Out",
       goodNews: "Good News",
       badNews: "Bad News",
       giphyData: {},
@@ -59,9 +59,10 @@ export class App extends React.Component {
     this.setState({
       active: true,
       man: "",
-      reset: "reset",
+      reset: "Get Me Out Of Here",
       attributes: "",
-      goodNews: "Good News"
+      goodNews: "Good News",
+      badNews: "Bad News"
     });
   };
 
@@ -70,14 +71,17 @@ export class App extends React.Component {
       active: false,
       man: this.state.giphyData.data.images.hd.mp4,
       attributes: giphyLogo,
-      reset: "Are You Ready To Work"
+      reset: "Are You Ready To Work",
+      badNews: "Yes",
+      goodNews: "No way I'm not doing that!"
     });
   };
 
   handleGoodNews = () => {
     this.setState({
-      goodNews: "Sorry Still Bad!",
-      active: true
+      goodNews: "You are not you, but i have a job you can do",
+      active: true,
+      man: !this.state.man
     });
   };
 
