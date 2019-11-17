@@ -4,6 +4,10 @@ import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 import giphyLogo from "./assets/Poweredby_100px-Black_VertText.png";
 
+const gif = {
+  SUQY8unAULeCvBS0Rl: "SUQY8unAULeCvBS0Rl",
+  cPO3X7QiRuHmX7OWiv: "cPO3X7QiRuHmX7OWiv"
+};
 const videoStyle = {
   width: "600px",
   position: "absolute",
@@ -34,10 +38,11 @@ export class App extends React.Component {
       attributes: ""
     };
   }
+
   // The tick function sets the current state. TypeScript will let us know
   componentDidMount() {
     let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
-    const url = `https://api.giphy.com/v1/gifs/SUQY8unAULeCvBS0Rl?&api_key=${key}&limit=5`;
+    const url = `https://api.giphy.com/v1/gifs/${gif}?&api_key=${key}&limit=5`;
 
     fetch(url)
       .then(resp => resp.json())
@@ -58,7 +63,8 @@ export class App extends React.Component {
     this.setState({
       active: true,
       man: "",
-      reset: "reset"
+      reset: "reset",
+      attributes: ""
     });
   };
 
