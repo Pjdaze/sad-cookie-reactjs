@@ -87,11 +87,11 @@ export class App extends React.Component {
   handleGoodNews = () => {
     this.setState({
       goodNews:
-        this.state.goodNews === "No way I'm not doing that!"
-          ? "I'll give you 6 mo to think about it"
-          : "You are not you, but i have a job you can do"
-          ? "Good News"
-          : null,
+        this.state.goodNews === "Good News"
+          ? "You are not you, but i have job for you"
+          : this.state.goodNews === "No way I'm not doing that!"
+          ? "I'll Give You 6 Mo To Think About It."
+          : "Click That You Are Ready!!!",
       active: false,
       man: !this.state.man,
       badNews: "Bad News",
