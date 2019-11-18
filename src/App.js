@@ -46,7 +46,7 @@ export class App extends React.Component {
         console.log(res);
 
         this.setState({
-          giphyData: { ...res }
+          giphyData: { ...res.data }
         });
       });
   }
@@ -57,7 +57,7 @@ export class App extends React.Component {
 
   handleBadNews = () => {
     this.setState({
-      active: true,
+      active: this.state.badNews === "Bad News",
       man: "",
       reset: "Get Me Out Of Here",
       attributes: "",
@@ -69,7 +69,7 @@ export class App extends React.Component {
   handleReset = () => {
     this.setState({
       active: false,
-      man: this.state.giphyData.data.images.hd.mp4,
+      man: this.state.giphyData.images.hd.mp4,
       attributes: giphyLogo,
       reset: "Are You Ready To Work",
       badNews: "Yes",
