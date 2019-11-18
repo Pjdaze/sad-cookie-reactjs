@@ -91,7 +91,7 @@ export class App extends React.Component {
           ? "You are not you, but i have job for you"
           : this.state.goodNews === "No way I'm not doing that!"
           ? "I'll Give You 6 Mo To Think About It."
-          : "Click That You Are Ready!!!",
+          : "Click That You Are Ready.. or you'll get a year!",
       active: false,
       man: !this.state.man,
       badNews: "Bad News",
@@ -159,9 +159,10 @@ export class App extends React.Component {
         </button>
         <div>
           <video
+            type="video/mp4"
             playsInline={true}
             loop={true}
-            autoPlay
+            autoPlay={true}
             style={videoStyle}
             src={man}
           />
