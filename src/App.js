@@ -31,7 +31,8 @@ export class App extends React.Component {
       badNews: "Bad News",
       giphyData: {},
       man: "",
-      attributes: ""
+      attributes: "",
+      twitch: false
     };
   }
 
@@ -55,14 +56,19 @@ export class App extends React.Component {
     this.setState(prevState => ({ active: !prevState.active }));
   };
 
+  toggleTwitch = () => {
+    this.setState(prevState => ({ twitch: !prevState.twitch }));
+  };
+
   handleBadNews = () => {
     this.setState({
       active: this.state.badNews === "Bad News",
       man: "",
       reset: "Get Me Out Of Here",
-      attributes: "",
+      attributes: null,
       goodNews: "Good News",
-      badNews: "Bad News"
+      badNews: "Bad News",
+      twitch: false
     });
   };
 
@@ -73,20 +79,36 @@ export class App extends React.Component {
       attributes: giphyLogo,
       reset: "Are You Ready To Work",
       badNews: "Yes",
-      goodNews: "No way I'm not doing that!"
+      goodNews: "No way I'm not doing that!",
+      twitch: false
     });
   };
 
   handleGoodNews = () => {
     this.setState({
-      goodNews: "You are not you, but i have a job you can do",
-      active: true,
-      man: !this.state.man
+      goodNews:
+        this.state.goodNews === "No way I'm not doing that!"
+          ? "I'll give you 6 mo to think about it"
+          : "You are not you, but i have a job you can do"
+          ? "Good News"
+          : null,
+      active: false,
+      man: !this.state.man,
+      badNews: "Bad News",
+      twitch: true
     });
   };
 
   render() {
-    const { active, reset, goodNews, badNews, man, attributes } = this.state;
+    const {
+      active,
+      reset,
+      goodNews,
+      badNews,
+      man,
+      attributes,
+      twitch
+    } = this.state;
     return (
       <HomeWrap>
         <a href="https://giphy.com/">
@@ -99,7 +121,9 @@ export class App extends React.Component {
         <div className="cookie">
           <div
             onClick={this.toggleClass}
-            className={`cookie-eye sad ${active ? "active" : null}`}
+            className={`cookie-eye sad ${
+              active ? "active" : twitch ? "twitch" : null
+            }`}
           >
             <div
               className={` cookie-rim  sad ${active ? "active" : null}`}
@@ -123,7 +147,7 @@ export class App extends React.Component {
           </button>
 
           <button
-            onClick={this.handleGoodNews}
+            onClick={goodNews ? this.handleGoodNews : this.handleTwitch}
             className={`news good-news sad ${active ? "active" : null}`}
           >
             <h4>{goodNews}</h4>

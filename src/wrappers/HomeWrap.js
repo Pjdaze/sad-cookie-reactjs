@@ -57,6 +57,8 @@ const HomeWrap = styled.div`
     .news {
       font-size: 2.2em;
       margin: 35px;
+      height: 100%;
+      padding: 10px;
     }
 
     .reset h4 {
@@ -129,6 +131,16 @@ const HomeWrap = styled.div`
     &.active {
       background-color: #b3b1b2;
       box-shadow: inset 0 0 0px 3px #8a8a8a;
+    }
+
+    &.twitch {
+      animation: blinker 0.2s linear infinite;
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
     }
   }
 
