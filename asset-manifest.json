@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sad-cookie-reactjs/static/css/main.347386fc.chunk.css",
-    "main.js": "/sad-cookie-reactjs/static/js/main.9865fe87.chunk.js",
-    "main.js.map": "/sad-cookie-reactjs/static/js/main.9865fe87.chunk.js.map",
+    "main.js": "/sad-cookie-reactjs/static/js/main.09158ba4.chunk.js",
+    "main.js.map": "/sad-cookie-reactjs/static/js/main.09158ba4.chunk.js.map",
     "runtime-main.js": "/sad-cookie-reactjs/static/js/runtime-main.8fe47950.js",
     "runtime-main.js.map": "/sad-cookie-reactjs/static/js/runtime-main.8fe47950.js.map",
     "static/js/2.cc89ed48.chunk.js": "/sad-cookie-reactjs/static/js/2.cc89ed48.chunk.js",
     "static/js/2.cc89ed48.chunk.js.map": "/sad-cookie-reactjs/static/js/2.cc89ed48.chunk.js.map",
     "index.html": "/sad-cookie-reactjs/index.html",
-    "precache-manifest.4519861093156bb5c48e8d94a28d8184.js": "/sad-cookie-reactjs/precache-manifest.4519861093156bb5c48e8d94a28d8184.js",
+    "precache-manifest.6b45dde8f97577cdf92a6526c2905a9e.js": "/sad-cookie-reactjs/precache-manifest.6b45dde8f97577cdf92a6526c2905a9e.js",
     "service-worker.js": "/sad-cookie-reactjs/service-worker.js",
     "static/css/main.347386fc.chunk.css.map": "/sad-cookie-reactjs/static/css/main.347386fc.chunk.css.map",
     "static/media/logo.svg": "/sad-cookie-reactjs/static/media/logo.25bf045c.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8fe47950.js",
     "static/js/2.cc89ed48.chunk.js",
     "static/css/main.347386fc.chunk.css",
-    "static/js/main.9865fe87.chunk.js"
+    "static/js/main.09158ba4.chunk.js"
   ]
 }
