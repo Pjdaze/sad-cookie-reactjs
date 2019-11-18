@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sad-cookie-reactjs/precache-manifest.159630dfcb927612f96da40dfefff7f4.js"
+  "/sad-cookie-reactjs/precache-manifest.87315c5f87a179e9b26679e056c4be43.js"
 );
 
 self.addEventListener('message', (event) => {

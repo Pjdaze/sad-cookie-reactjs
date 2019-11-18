@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cb074f92f5da5b410f7b81b090604701",
+    "revision": "9fcfc4dd7ef0bb7f49d1cd1d3444e6ca",
     "url": "/sad-cookie-reactjs/index.html"
   },
   {
-    "revision": "83dc8f9989d0bd3837f1",
+    "revision": "16d11afd9754a6344bec",
     "url": "/sad-cookie-reactjs/static/css/main.347386fc.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sad-cookie-reactjs/static/js/2.cc89ed48.chunk.js"
   },
   {
-    "revision": "83dc8f9989d0bd3837f1",
-    "url": "/sad-cookie-reactjs/static/js/main.f7c376f1.chunk.js"
+    "revision": "16d11afd9754a6344bec",
+    "url": "/sad-cookie-reactjs/static/js/main.04fdcd77.chunk.js"
   },
   {
     "revision": "d21f442a2fda0b23b6bd",
