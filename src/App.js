@@ -32,14 +32,15 @@ export class App extends React.Component {
       giphyData: {},
       man: "",
       attributes: "",
-      twitch: false
+      twitch: false,
+      picID: "SUQY8unAULeCvBS0Rl"
     };
   }
 
   // The tick function sets the current state. TypeScript will let us know
   componentDidMount() {
     let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
-    const url = `https://api.giphy.com/v1/gifs/SUQY8unAULeCvBS0Rl?&api_key=${key}&limit=5`;
+    const url = `https://api.giphy.com/v1/gifs/${this.state.picID}?&api_key=${key}&limit=5`;
 
     fetch(url)
       .then(resp => resp.json())
@@ -95,7 +96,9 @@ export class App extends React.Component {
       active: false,
       man: !this.state.man,
       badNews: "Bad News",
-      twitch: true
+      twitch: true,
+
+      picID: "RKG36P6Eju104hvFzr"
     });
   };
 
@@ -107,7 +110,8 @@ export class App extends React.Component {
       badNews,
       man,
       attributes,
-      twitch
+      twitch,
+      picID
     } = this.state;
     return (
       <HomeWrap>
@@ -165,6 +169,7 @@ export class App extends React.Component {
             autoPlay={true}
             style={videoStyle}
             src={man}
+            picID={picID}
           />
         </div>
       </HomeWrap>

@@ -6,8 +6,8 @@ const HomeWrap = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  width: 100vw;
+
+  width: 100%;
   background: #16222a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -28,8 +28,6 @@ const HomeWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px;
-    height: 100%;
   }
   .news {
     display: flex;

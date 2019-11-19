@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
-@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Libre+Barcode+39+Text|Cabin+Sketch:700");
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -46,11 +45,6 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -63,4 +57,3 @@ a {
 ul {
   list-style: none;
 }
-
