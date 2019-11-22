@@ -33,16 +33,39 @@ export class App extends React.Component {
       man: "",
       attributes: "",
       twitch: false,
-      picID: "SUQY8unAULeCvBS0Rl"
+      picID: {},
+      buttonID: ""
     };
   }
 
   // The tick function sets the current state. TypeScript will let us know
   componentDidMount() {
     let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
-    const url = `https://api.giphy.com/v1/gifs/${this.state.picID}?&api_key=${key}&limit=5`;
 
-    fetch(url)
+    const createURL = () => {
+      const idList = {
+        ready: "SUQY8unAULeCvBS0Rl",
+        bored: "RKG36P6Eju104hvFzr",
+        megaBored: "jpnTLQnsoUlL9pCs9p",
+        areYouKidding: "cLkhUp50zuBpPiARgg"
+      };
+      const ID = e => {
+        if (this.state.reset === "Are You Ready To Work") {
+          return idList.ready;
+        } else if (this.state.goodNews === "No way I'm not doing that!") {
+          return idList.bored;
+        }
+        return idList.megaBored;
+      };
+
+      const url = `https://api.giphy.com/v1/gifs/${ID(
+        idList
+      )}?&api_key=${key}&limit=5`;
+
+      return url;
+    };
+
+    fetch(createURL())
       .then(resp => resp.json())
       .then(res => {
         console.log(res);
@@ -64,7 +87,7 @@ export class App extends React.Component {
   handleBadNews = () => {
     this.setState({
       active: this.state.badNews === "Bad News",
-      man: "",
+
       reset: "Get Me Out Of Here",
       attributes: null,
       goodNews: "Good News",
@@ -94,11 +117,9 @@ export class App extends React.Component {
           ? "I'll Give You 6 Mo To Think About It."
           : "Click That You Are Ready.. or you'll get a year!",
       active: false,
-      man: !this.state.man,
+      man: this.state.giphyData.images.hd.mp4,
       badNews: "Bad News",
-      twitch: true,
-
-      picID: "RKG36P6Eju104hvFzr"
+      twitch: !this.state.twitch
     });
   };
 
@@ -110,8 +131,7 @@ export class App extends React.Component {
       badNews,
       man,
       attributes,
-      twitch,
-      picID
+      twitch
     } = this.state;
     return (
       <HomeWrap>
@@ -169,7 +189,6 @@ export class App extends React.Component {
             autoPlay={true}
             style={videoStyle}
             src={man}
-            picID={picID}
           />
         </div>
       </HomeWrap>
