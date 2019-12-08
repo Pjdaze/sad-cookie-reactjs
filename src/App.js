@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 import giphyLogo from "./assets/Poweredby_100px-Black_VertText.png";
-
+3;
 const videoStyle = {
   width: "600px",
   position: "absolute",
@@ -33,8 +33,13 @@ export class App extends React.Component {
       man: "",
       attributes: "",
       twitch: false,
-      picID: {},
-      buttonID: ""
+      idLists: {
+        ready: "SUQY8unAULeCvBS0Rl",
+        bored: "RKG36P6Eju104hvFzr",
+        megaBored: "jpnTLQnsoUlL9pCs9p",
+        areYouKidding: "cLkhUp50zuBpPiARgg"
+      },
+      buttonID: "cLkhUp50zuBpPiARgg"
     };
   }
 
@@ -42,30 +47,9 @@ export class App extends React.Component {
   componentDidMount() {
     let key = "1NQvFtwd9omYwLMdMfXpb71tQJWeOIWt";
 
-    const createURL = () => {
-      const idList = {
-        ready: "SUQY8unAULeCvBS0Rl",
-        bored: "RKG36P6Eju104hvFzr",
-        megaBored: "jpnTLQnsoUlL9pCs9p",
-        areYouKidding: "cLkhUp50zuBpPiARgg"
-      };
-      const ID = e => {
-        if (this.state.reset === "Are You Ready To Work") {
-          return idList.ready;
-        } else if (this.state.goodNews === "No way I'm not doing that!") {
-          return idList.bored;
-        }
-        return idList.megaBored;
-      };
+    const url = `https://api.giphy.com/v1/gifs/${this.state.buttonID}?&api_key=${key}&limit=5`;
 
-      const url = `https://api.giphy.com/v1/gifs/${ID(
-        idList
-      )}?&api_key=${key}&limit=5`;
-
-      return url;
-    };
-
-    fetch(createURL())
+    fetch(url)
       .then(resp => resp.json())
       .then(res => {
         console.log(res);
@@ -75,6 +59,23 @@ export class App extends React.Component {
         });
       });
   }
+
+  getGifIds = () => {
+    if (this.state.reset === "Are You Ready To Work") {
+      this.setState({
+        buttonID: this.state.idLists.bored,
+        man: this.state.giphyData.images.hd.mp4
+      });
+    } else if (this.state.goodNews === "No way I'm not doing that!") {
+      this.setState({
+        buttonID: this.state.idLists.areYouKidding,
+        man: this.state.giphyData.images.hd.mp4
+      });
+    }
+    this.setState({
+      man: ""
+    });
+  };
 
   toggleClass = () => {
     this.setState(prevState => ({ active: !prevState.active }));
@@ -87,7 +88,7 @@ export class App extends React.Component {
   handleBadNews = () => {
     this.setState({
       active: this.state.badNews === "Bad News",
-
+      man: "",
       reset: "Get Me Out Of Here",
       attributes: null,
       goodNews: "Good News",
@@ -149,9 +150,7 @@ export class App extends React.Component {
               active ? "active" : twitch ? "twitch" : null
             }`}
           >
-            <div
-              className={` cookie-rim  sad ${active ? "active" : null}`}
-            ></div>
+            <div className={` cookie-rim  sad ${active && "active"}`}></div>
           </div>
 
           <div className="left-foot"></div>
@@ -172,13 +171,18 @@ export class App extends React.Component {
 
           <button
             onClick={goodNews ? this.handleGoodNews : this.handleTwitch}
-            className={`news good-news sad ${active ? "active" : null}`}
+            className={`news good-news sad ${active && "active"}`}
           >
             <h4>{goodNews}</h4>
           </button>
         </div>
 
-        <button type="button" className="reset sad" onClick={this.handleReset}>
+        <button
+          type="button"
+          onClick={this.setClickOption}
+          className="reset sad"
+          onClick={this.handleReset}
+        >
           <h4>{reset}</h4>
         </button>
         <div>
