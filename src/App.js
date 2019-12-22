@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 import giphyLogo from "./assets/Poweredby_100px-Black_VertText.png";
-3;
+
 const videoStyle = {
   width: "600px",
   position: "absolute",
