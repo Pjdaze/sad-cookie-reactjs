@@ -4,6 +4,12 @@ import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 import giphyLogo from "./assets/Poweredby_100px-Black_VertText.png";
 import { videoStyle, giphyStyle } from "./gifStyles";
+const idList = {
+  ready: "SUQY8unAULeCvBS0Rl",
+  bored: "RKG36P6Eju104hvFzr",
+  megaBored: "jpnTLQnsoUlL9pCs9p",
+  areYouKidding: "cLkhUp50zuBpPiARgg"
+};
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,13 +23,8 @@ export class App extends React.Component {
       man: "",
       attributes: "",
       twitch: false,
-      idLists: {
-        ready: "SUQY8unAULeCvBS0Rl",
-        bored: "RKG36P6Eju104hvFzr",
-        megaBored: "jpnTLQnsoUlL9pCs9p",
-        areYouKidding: "cLkhUp50zuBpPiARgg"
-      },
-      buttonID: "cLkhUp50zuBpPiARgg"
+
+      buttonID: idList.bored ? this.goodNews : idList.ready
     };
   }
 
