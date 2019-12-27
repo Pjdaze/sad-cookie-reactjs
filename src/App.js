@@ -3,23 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import HomeWrap from "./wrappers/HomeWrap";
 import giphyLogo from "./assets/Poweredby_100px-Black_VertText.png";
-
-const videoStyle = {
-  width: "600px",
-  position: "absolute",
-  left: "50%",
-  marginLeft: "-300px",
-  top: "30%"
-};
-
-const giphyStyle = {
-  position: "absolute",
-  right: "100px",
-  width: "100px",
-
-  top: "30%"
-};
-
+import { videoStyle, giphyStyle } from "./gifStyles";
 export class App extends React.Component {
   constructor(props) {
     super(props);
